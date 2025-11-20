@@ -1,23 +1,23 @@
 import React from 'react';
 import './TopBar.css';
-// استخدم أيقونات SVG خفيفة
-import { Phone, Mail } from './Icons'; // سننشئ هذا الملف
+import { Phone, Mail } from './Icons';
 
 function TopBar() {
   return (
     <div className="top-bar">
       <div className="top-bar-info">
-        <a href="tel:+201000000000">
+        {/* عدل رقم التليفون هنا */}
+        <a href="tel:+201xxxxxxxxx">
           <Phone />
-          <span>+20 100 000 0000</span>
+          <span>+20 1xx xxx xxxx</span>
         </a>
-        <a href="mailto:info@drnour.com">
+        {/* عدل الإيميل هنا */}
+        <a href="mailto:your-email@example.com">
           <Mail />
-          <span>info@drnour.com</span>
+          <span>your-email@example.com</span>
         </a>
       </div>
       <div className="top-bar-socials">
-        {/* يمكنك إضافة روابط السوشيال هنا أيضاً إذا أردت */}
       </div>
     </div>
   );

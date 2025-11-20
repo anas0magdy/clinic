@@ -1,19 +1,19 @@
 import React from 'react';
 import './FloatingSocials.css';
-// 1. استيراد كل الأيقونات
 import { Phone, WhatsApp, Facebook, Instagram } from './Icons';
 
 function FloatingSocials() {
-  // --- استبدل هذا بمعلوماتك ---
-  const phoneNumber = '+201000000000';
-  const whatsappNumber = '+201000000000'; // رقم واتساب (مع كود الدولة)
-  const facebookLink = 'https://www.facebook.com/your-page';
-  const instagramLink = 'https://www.instagram.com/your-profile';
-  // --- نهاية جزء المعلومات ---
+  // <<< تم تحديث البيانات بناءً على اللينكات >>>
+  const phoneNumber = '+201xxxxxxxxx'; // (لسه محتاجين رقم التليفون)
+  const whatsappNumber = '+201xxxxxxxxx'; // (لسه محتاجين رقم الواتساب)
+  
+  // اللينكات اللي انت بعتها
+  const facebookLink = 'https://www.facebook.com/share/1EM5iPsj13/?mibextid=wwXIfr';
+  const instagramLink = 'https://www.instagram.com/dr.hams_samy'; 
+  // -----------------------
 
   return (
     <div className="floating-container">
-      {/* 2. إضافة كل الأيقونات */}
       <a 
         href={facebookLink} 
         className="floating-icon facebook"

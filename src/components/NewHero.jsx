@@ -1,21 +1,20 @@
 import React from 'react';
-import { Link } from 'react-scroll'; // استخدام Link من react-scroll
+import { Link } from 'react-scroll'; 
 import './NewHero.css';
 
 function NewHero() {
   return (
-    // 1. إضافة الـ ID المهم
     <section id="new-hero-section" className="new-hero-section fade-in">
       <div className="hero-content-area">
-        <span className="hero-subtitle">أخصائية طب الأسرة (مثال)</span>
-        <h1 className="hero-title">د. نـــور ســلــيــم</h1>
+        <span className="hero-subtitle">أخصائية طب الأسرة والتغذية العلاجية</span>
+        {/* تم تحديث الاسم */}
+        <h1 className="hero-title">د. هـمـس سـامـي</h1>
         <p className="hero-description">
           خبرة لسنوات في تقديم الرعاية الصحية المتكاملة والشاملة 
           لكِ ولعائلتك.
         </p>
-        {/* 2. تغيير الزر لـ react-scroll Link */}
         <Link 
-          to="contact-section" // اسم الـ ID للقسم
+          to="contact-section" 
           spy={true}
           smooth={true}
           duration={500}
@@ -27,9 +26,8 @@ function NewHero() {
       </div>
       <div className="hero-image-area">
         <img 
-          // 3. تغيير مسار الصورة
           src="/images/doctor-hero.png" 
-          alt="صورة الدكتورة نور سليم"
+          alt="د. همس سامي"
           className="hero-image"
         />
         <div className="hero-image-bg-shape1"></div>
