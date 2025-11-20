@@ -7,9 +7,9 @@ function ContactSection() {
   
   return (
     <section id="contact-section" className="contact-section-wrapper">
-      <h2 className="section-title">رجّعي لعينك راحتها</h2>
+      <h2 className="section-title">رجّع لعينك راحتها</h2>
       <p className="contact-subtitle">
-        لا تستحملي الجفاف أو الصداع أكثر. اضغطي أدناه لحجز كشفك أو جلستك عبر واتساب.
+        متستحملش الجفاف والصداع اكتر من كدا. اضغط لحجز كشفك أو جلستك عبر واتساب.
       </p>
       <div className="contact-content">
         <a 
@@ -19,7 +19,7 @@ function ContactSection() {
           rel="noopener noreferrer"
         >
           <WhatsApp />
-          <span>احجزي موعدك الآن (01065957501)</span>
+          <span>احجزي موعدك الآن ()</span>
         </a>
       </div>
     </section>
