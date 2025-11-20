@@ -3,15 +3,13 @@ import { WhatsApp } from './Icons';
 import './ContactSection.css';
 
 function ContactSection() {
-  // <<< عدل رقم الواتساب هنا >>>
-  const whatsappNumber = '+201xxxxxxxxx'; 
-  // ---------------------------
+  const whatsappNumber = '+201065957501'; 
   
   return (
     <section id="contact-section" className="contact-section-wrapper">
-      <h2 className="section-title">هل أنتِ مستعدة؟</h2>
+      <h2 className="section-title">رجّعي لعينك راحتها</h2>
       <p className="contact-subtitle">
-        اضغطي على الزر أدناه لحجز موعدك مباشرة عبر واتساب.
+        لا تستحملي الجفاف أو الصداع أكثر. اضغطي أدناه لحجز كشفك أو جلستك عبر واتساب.
       </p>
       <div className="contact-content">
         <a 
@@ -21,7 +19,7 @@ function ContactSection() {
           rel="noopener noreferrer"
         >
           <WhatsApp />
-          <span>احجزي موعدك الآن عبر واتساب</span>
+          <span>احجزي موعدك الآن (01065957501)</span>
         </a>
       </div>
     </section>

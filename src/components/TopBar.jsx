@@ -6,15 +6,13 @@ function TopBar() {
   return (
     <div className="top-bar">
       <div className="top-bar-info">
-        {/* عدل رقم التليفون هنا */}
-        <a href="tel:+201xxxxxxxxx">
+        <a href="tel:+201065957501">
           <Phone />
-          <span>+20 1xx xxx xxxx</span>
+          <span>0106 595 7501</span>
         </a>
-        {/* عدل الإيميل هنا */}
-        <a href="mailto:your-email@example.com">
+        <a href="mailto:info@drhamssamy.com">
           <Mail />
-          <span>your-email@example.com</span>
+          <span>info@drhamssamy.com</span>
         </a>
       </div>
       <div className="top-bar-socials">

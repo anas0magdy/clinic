@@ -5,27 +5,25 @@ function ServicesSection() {
   
   const services = [
     {
-      // 1. تغيير مسار الصورة
       img: "/images/service-1.jpg",
-      title: "استشارات طبية",
-      description: "استشارات دقيقة وشاملة لجميع الحالات الصحية العامة."
+      title: "علاج جفاف العين نهائياً",
+      description: "جلسات متخصصة بأحدث التكنولوجيا لعلاج السبب الحقيقي للجفاف (حرقان، دموع، زغللة) وليس مجرد قطرات مؤقتة."
     },
     {
       img: "/images/service-2.jpg",
-      title: "متابعة دورية",
-      description: "خطط متابعة دورية لضمان أفضل النتائج الصحية."
+      title: "عمليات تصحيح الإبصار",
+      description: "تقنيات عالمية لتصحيح النظر (ليزك، فيمتو ليزك) بأعلى معايير الأمان، لتعيشي حياتك بحرية بدون نظارة."
     },
     {
       img: "/images/service-3.jpg",
-      title: "رعاية الأسرة",
-      description: "خدمات طبية متكاملة لجميع أفراد الأسرة (كبار وأطفال)."
+      title: "فحص الصداع وإجهاد العين",
+      description: "تشخيص دقيق لأسباب الصداع المتكرر الناتج عن ضعف النظر أو إجهاد عضلات العين، خاصة لمستخدمي الشاشات."
     }
   ];
 
   return (
-    // 2. إضافة الـ ID المهم
     <section id="services-section" className="services-section slide-in-up">
-      <h2 className="section-title">خدماتي</h2>
+      <h2 className="section-title">خدمات العيادة</h2>
       <div className="services-container">
         {services.map((service, index) => (
           <div className="service-card" key={index}>
