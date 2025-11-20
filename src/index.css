@@ -1,0 +1,36 @@
+/* إضافة متغيرات ألوان احترافية */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --text-dark: #333;
+  --text-light: #555;
+  --bg-light: #f9f9f9;
+  --bg-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* استخدام خط احترافي (يفضل إضافته من Google Fonts) */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

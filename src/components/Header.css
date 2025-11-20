@@ -1,0 +1,210 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* 1. تعديل الـ transition (إضافة transform) */
+  transition: padding 0.3s ease, box-shadow 0.3s ease, transform 0.4s ease-in-out;
+  transform: translateY(0);
+}
+
+/* 2. إضافة كلاس الإخفاء (للديسكتوب) */
+.site-header.hidden {
+  transform: translateY(-100%);
+}
+
+.logo {
+  flex-shrink: 0;
+  /* 3. ضمان أن اللوجو دائماً في اليمين */
+  order: 2; 
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+.header-left {
+  /* 4. حاوية اللينكات والهمبرجر (في اليسار) */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  order: 1;
+}
+
+/* 5. حاوية اللينكات الفعلية (للديسكتوب) */
+.header-nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: bold;
+  background-color: #f0f8ff;
+}
+
+.header-cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.header-cta-button:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* 6. تنسيق زر الهمبرجر (مخفي في الديسكتوب) */
+.mobile-menu-toggle {
+  display: none; /* مخفي افتراضياً */
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 101; /* فوق القائمة */
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #002a5c;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+.mobile-menu-toggle span:nth-child(1) { top: 0; }
+.mobile-menu-toggle span:nth-child(2) { top: 10px; }
+.mobile-menu-toggle span:nth-child(3) { top: 20px; }
+
+/* 7. انميشن الهمبرجر (يتحول لـ X) */
+.mobile-menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.mobile-menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+/* --- حالة الـ Scrolled (للديسكتوب) --- */
+.site-header.scrolled {
+  padding: 0.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-header.scrolled .logo img {
+  height: 40px;
+}
+
+
+/* --- 8. تصميم الموبايل (أهم تعديل) --- */
+@media (max-width: 768px) {
+  .site-header {
+    /* (إلغاء الترتيب الرأسي) */
+    /* flex-direction: column-reverse; <-- ملغي */
+    padding: 1rem;
+    align-items: center; /* توسيط عمودي */
+  }
+
+  .logo img {
+    height: 40px;
+  }
+  
+  /* إظهار زر الهمبرجر */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* إخفاء حاوية اللينكات (ستصبح منسدلة) */
+  .header-nav-container {
+    display: none; /* مخفية افتراضياً */
+    
+    /* 9. تنسيق القائمة المنسدلة */
+    position: absolute;
+    top: 100%; /* أسفل الهيدر مباشرة */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    /* انميشن الانسدال */
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* 10. كلاس الفتح للقائمة المنسدلة */
+  .header-nav-container.mobile-open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* تنسيق اللينكات داخل القائمة المنسدلة */
+  .header-nav-container.mobile-open nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header-nav-container.mobile-open .header-cta-button {
+    width: 90%;
+    text-align: center;
+  }
+  
+  /* 11. إلغاء تأثير تصغير الهيدر في الموبايل */
+  .site-header.scrolled {
+    padding: 1rem;
+  }
+  .site-header.scrolled .logo img {
+    height: 40px;
+  }
+}

@@ -1,0 +1,129 @@
+.new-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 90vh; /* ارتفاع الشاشة تقريباً */
+  padding: 2rem 4rem;
+  background-color: #f9fcff; /* خلفية فاتحة جداً */
+  overflow: hidden; /* لإخفاء الأشكال الزائدة */
+}
+
+.hero-content-area {
+  flex: 1;
+  max-width: 550px;
+  /* تحريكة دخول النص */
+  animation: slideInUp 0.7s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #002a5c; /* لون أزرق غامق */
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero-cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  cursor: pointer;
+}
+
+.hero-cta-button:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.hero-image-area {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* تحريكة دخول الصورة */
+  animation: fadeIn 0.8s 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* تصميم دائري للصورة */
+  z-index: 2;
+  border: 8px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* الأشكال الجمالية الخلفية (مستوحاة من الموقع) */
+.hero-image-bg-shape1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e6f2ff;
+  border-radius: 50%;
+  z-index: 1;
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.hero-image-bg-shape2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--primary-color);
+  border-radius: 50%;
+  z-index: 1;
+  transform: scale(1.2) rotate(45deg);
+  opacity: 0.5;
+  animation: spin 60s linear infinite; /* تحريكة دوران بطيئة */
+}
+
+@keyframes spin {
+  from { transform: scale(1.2) rotate(0deg); }
+  to { transform: scale(1.2) rotate(360deg); }
+}
+
+/* --- تصميم الموبايل --- */
+@media (max-width: 768px) {
+  .new-hero-section {
+    flex-direction: column-reverse; /* عكس الترتيب (الصورة فوق) */
+    padding: 2rem 1.5rem;
+    min-height: auto;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+  .hero-image-area {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}

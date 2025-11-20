@@ -1,0 +1,53 @@
+.contact-section-wrapper {
+  padding: 4rem 2rem;
+  background-color: #f9fcff; /* خلفية فاتحة */
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 1. إضافة تنسيقات زر الواتساب الجديد */
+.contact-whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #25D366; /* لون واتساب الأخضر */
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+  /* تحريكة بسيطة */
+  animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.contact-whatsapp-button:hover {
+  background-color: #1DA851; /* لون أغمق عند الـ hover */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  animation-play-state: paused; /* إيقاف الـ pulse عند الـ hover */
+}
+
+.contact-whatsapp-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* (استعارة التحريكة من ملف الأيقونات العائمة) */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
