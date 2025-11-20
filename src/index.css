@@ -15,10 +15,14 @@
 }
 
 body {
-  /* استخدام خط احترافي (يفضل إضافته من Google Fonts) */
+  /* استخدام خط احترافي */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: var(--bg-white);
   color: var(--text-dark);
+  
+  /* <<< أهم تعديل: ضبط اتجاه الموقع بالكامل لليمين >>> */
+  direction: rtl;
+  text-align: right;
 }
 
 a {

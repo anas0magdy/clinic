@@ -3,16 +3,18 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  min-height: 90vh; /* ارتفاع الشاشة تقريباً */
+  min-height: 90vh;
   padding: 2rem 4rem;
-  background-color: #f9fcff; /* خلفية فاتحة جداً */
-  overflow: hidden; /* لإخفاء الأشكال الزائدة */
+  background-color: #f9fcff;
+  overflow: hidden;
+  /* ضمان الاتجاه لليمين */
+  direction: rtl;
+  text-align: right;
 }
 
 .hero-content-area {
   flex: 1;
   max-width: 550px;
-  /* تحريكة دخول النص */
   animation: slideInUp 0.7s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
 }
@@ -25,11 +27,21 @@
   margin-bottom: 0.5rem;
 }
 
+/* تنسيق خاص للنص الإنجليزي داخل العربي */
+.english-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  direction: ltr;
+  unicode-bidi: embed; /* يضمن ظهور الأقواس بشكل صحيح */
+  margin-right: 5px;
+}
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #002a5c; /* لون أزرق غامق */
+  color: #002a5c;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .hero-description {
@@ -37,6 +49,8 @@
   color: var(--text-light);
   line-height: 1.7;
   margin-bottom: 2rem;
+  /* هذا السطر يضمن أن السطر الأخير القصير يظل على اليمين */
+  text-align: right; 
 }
 
 .hero-cta-button {
@@ -49,6 +63,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
   cursor: pointer;
+  display: inline-block;
 }
 
 .hero-cta-button:hover {
@@ -65,7 +80,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* تحريكة دخول الصورة */
   animation: fadeIn 0.8s 0.4s ease-in-out forwards;
   opacity: 0;
 }
@@ -73,13 +87,12 @@
 .hero-image {
   width: 100%;
   height: auto;
-  border-radius: 50%; /* تصميم دائري للصورة */
+  border-radius: 50%;
   z-index: 2;
   border: 8px solid white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* الأشكال الجمالية الخلفية (مستوحاة من الموقع) */
 .hero-image-bg-shape1 {
   position: absolute;
   width: 100%;
@@ -100,7 +113,7 @@
   z-index: 1;
   transform: scale(1.2) rotate(45deg);
   opacity: 0.5;
-  animation: spin 60s linear infinite; /* تحريكة دوران بطيئة */
+  animation: spin 60s linear infinite;
 }
 
 @keyframes spin {
@@ -111,11 +124,17 @@
 /* --- تصميم الموبايل --- */
 @media (max-width: 768px) {
   .new-hero-section {
-    flex-direction: column-reverse; /* عكس الترتيب (الصورة فوق) */
+    flex-direction: column-reverse;
     padding: 2rem 1.5rem;
     min-height: auto;
-    text-align: center;
+    /* في الموبايل ممكن نخلي الكلام في النص لو تحب، لكن اليمين أفضل للقراءة */
+    text-align: center; 
   }
+  
+  .hero-description {
+     text-align: center; /* في الموبايل توسيط الوصف */
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }

@@ -9,7 +9,7 @@ function AboutSection() {
         <div className="about-image">
           {/* تم تعديل مسار الصورة (إزالة / من البداية) */}
           <img 
-            src="images/clinic-photo.jpg" 
+            src="images/clinic-photo2.jpg" 
             alt="د. همس سامي" 
           />
         </div>
