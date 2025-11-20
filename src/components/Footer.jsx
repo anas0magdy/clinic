@@ -35,7 +35,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>جميع الحقوق محفوظة © {new Date().getFullYear()} د. همس سامي</p>
+        <p>جميع الحقوق محفوظة © {new Date().getFullYear()} Anas Magdy</p>
       </div>
     </footer>
   );
