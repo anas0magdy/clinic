@@ -7,8 +7,9 @@ function AboutSection() {
       <h2 className="section-title">من أنا</h2>
       <div className="about-section-content">
         <div className="about-image">
+          {/* تم تعديل مسار الصورة (إزالة / من البداية) */}
           <img 
-            src="/images/clinic-photo.jpg" 
+            src="images/clinic-photo.jpg" 
             alt="د. همس سامي" 
           />
         </div>

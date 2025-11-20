@@ -6,7 +6,11 @@ function NewHero() {
   return (
     <section id="new-hero-section" className="new-hero-section fade-in">
       <div className="hero-content-area">
-        <span className="hero-subtitle">أول طبيبة مصرية في الجمعية العالمية لجراحات تصحيح الإبصار (ISRS) 🇪🇬</span>
+        <span className="hero-subtitle">
+          أول طبيبة مصرية في الجمعية العالمية لجراحات تصحيح الإبصار 
+          {/* تم ضبط اتجاه النص الإنجليزي والعلم */}
+          <span style={{ display: 'inline-block', direction: 'ltr', marginRight: '5px' }}> (ISRS) 🇪🇬</span>
+        </span>
         <h1 className="hero-title">د. هـمـس سـامـي</h1>
         <p className="hero-description">
           رؤية أوضح، وحياة خالية من ألم الجفاف.
@@ -24,8 +28,9 @@ function NewHero() {
         </Link>
       </div>
       <div className="hero-image-area">
+        {/* تم تعديل مسار الصورة (إزالة / من البداية) */}
         <img 
-          src="/images/doctor-hero.png" 
+          src="images/doctor-hero.png" 
           alt="د. همس سامي"
           className="hero-image"
         />

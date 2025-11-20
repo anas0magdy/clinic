@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import Logo from './Logo'; // استيراد اللوجو الجديد
+import Logo from './Logo'; 
 import './Header.css';
 
 function Header() {
@@ -29,12 +29,11 @@ function Header() {
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       
       <div className="header-container">
-        {/* 1. اللوجو (على اليمين) */}
+        {/* اللوجو (مكون Logo مش محتاج تعديل صور، لكن لو استخدمت img تأكد من المسار) */}
         <div className="logo-wrapper">
           <Logo />
         </div>
 
-        {/* زر الموبايل */}
         <button 
           className={`mobile-menu-toggle ${isMobileMenuOpen ? "open" : ""}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -45,10 +44,8 @@ function Header() {
           <span></span>
         </button>
 
-        {/* 2. القائمة (على اليسار) */}
         <nav className={`nav-menu ${isMobileMenuOpen ? "mobile-open" : ""}`}>
           <ul>
-            {/* الترتيب: الرئيسية، عن الدكتور، خدماتنا، احجز موعد */}
             <li>
               <Link
                 activeClass="active"
@@ -82,7 +79,6 @@ function Header() {
                 خدماتنا
               </Link>
             </li>
-            {/* 3. زر الحجز كجزء من القائمة */}
             <li>
               <Link
                 to="contact-section"

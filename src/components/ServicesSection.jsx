@@ -5,17 +5,18 @@ function ServicesSection() {
   
   const services = [
     {
-      img: "/images/service-1.jpg",
+      // تم تعديل المسارات (إزالة /)
+      img: "images/service-1.jpg",
       title: "علاج جفاف العين نهائياً",
       description: "جلسات متخصصة بأحدث التكنولوجيا لعلاج السبب الحقيقي للجفاف (حرقان، دموع، زغللة) وليس مجرد قطرات مؤقتة."
     },
     {
-      img: "/images/service-2.jpg",
+      img: "images/service-2.jpg",
       title: "عمليات تصحيح الإبصار",
       description: "تقنيات عالمية لتصحيح النظر (ليزك، فيمتو ليزك) بأعلى معايير الأمان، لتعيشي حياتك بحرية بدون نظارة."
     },
     {
-      img: "/images/service-3.jpg",
+      img: "images/service-3.jpg",
       title: "فحص الصداع وإجهاد العين",
       description: "تشخيص دقيق لأسباب الصداع المتكرر الناتج عن ضعف النظر أو إجهاد عضلات العين، خاصة لمستخدمي الشاشات."
     }
