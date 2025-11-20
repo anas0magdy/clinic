@@ -8,7 +8,8 @@ function TopBar() {
       <div className="top-bar-info">
         <a href="tel:+201065957501">
           <Phone />
-          <span>0106 595 7501</span>
+          {/* ضبط اتجاه الرقم ليظهر بشكل صحيح */}
+          <span style={{ direction: 'ltr', display: 'inline-block' }}>0106 595 7501</span>
         </a>
         <a href="mailto:info@drhamssamy.com">
           <Mail />

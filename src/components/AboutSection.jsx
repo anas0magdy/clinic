@@ -4,7 +4,7 @@ import './AboutSection.css';
 function AboutSection() {
   return (
     <section id="about-section" className="about-section slide-in-up">
-      <h2 className="section-title">من أنا</h2>
+      <h2 className="section-title">عن الدكتور</h2>
       <div className="about-section-content">
         <div className="about-image">
           {/* تم تعديل مسار الصورة (إزالة / من البداية) */}

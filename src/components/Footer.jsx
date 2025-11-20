@@ -18,13 +18,15 @@ function Footer() {
           ></iframe>
         </div>
         <div className="footer-info">
-          {/* تم تحديث الاسم */}
           <h3>د. هـمـس سـامـي</h3>
           <p>
             العنوان: (يرجى إضافة العنوان هنا)
           </p>
           <p>
-            رقم الهاتف: <a href="tel:+201xxxxxxxxx">+20 1xx xxx xxxx</a>
+            رقم الهاتف: 
+            <a href="tel:+201065957501" style={{ direction: 'ltr', display: 'inline-block', marginLeft: '5px' }}>
+              0106 595 7501
+            </a>
           </p>
           <p>
             البريد الإلكتروني: <a href="mailto:info@drhamssamy.com">info@drhamssamy.com</a>
@@ -32,7 +34,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>جميع الحقوق محفوظة © {new Date().getFullYear()} د. همس سامي</p>
+        <p>جميع الحقوق محفوظة © {new Date().getFullYear()} Anas Magdy</p>
       </div>
     </footer>
   );

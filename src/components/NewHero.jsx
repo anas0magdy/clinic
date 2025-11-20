@@ -6,7 +6,6 @@ function NewHero() {
   return (
     <section id="new-hero-section" className="new-hero-section fade-in">
       <div className="hero-content-area">
-        {/* تم تعديل ترتيب النص ليظهر بشكل منسق */}
         <span className="hero-subtitle">
            أول طبيبة مصرية في الجمعية العالمية لجراحات تصحيح الإبصار <span className="english-text">(ISRS) EG</span>
         </span>
@@ -15,7 +14,7 @@ function NewHero() {
         
         <p className="hero-description">
           رؤية أوضح، وحياة خالية من ألم الجفاف.
-          نقدم لكِ أحدث بروتوكولات علاج جفاف العين نهائياً، وتقنيات تصحيح الإبصار العالمية، لأن عينك تستحق أفضل رعاية.
+          نقدم لك أحدث بروتوكولات علاج جفاف العين نهائياً، وتقنيات تصحيح الإبصار العالمية، لأن عينك تستحق أفضل رعاية.
         </p>
         
         <Link 
@@ -26,11 +25,10 @@ function NewHero() {
           offset={-80}
           className="hero-cta-button"
         >
-          احجزي كشفك الآن
+          احجز كشفك الآن
         </Link>
       </div>
       <div className="hero-image-area">
-        {/* تأكدنا من المسار الصحيح للصور */}
         <img 
           src="images/doctor-hero.png" 
           alt="د. همس سامي"
