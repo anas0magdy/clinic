@@ -4,15 +4,19 @@ import React from 'react';
 import NewHero from '../components/NewHero';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
-import ContactSection from '../components/ContactSection'; // 1. إضافة قسم التواصل
+import TestimonialsSection from '../components/TestimonialsSection'; // 1. استيراد القسم الجديد
+import ContactSection from '../components/ContactSection';
 
 function HomePage() {
   return (
     <>
-      {/* 2. هذه هي أقسام صفحتك بالترتيب */}
       <NewHero />
       <AboutSection />
       <ServicesSection />
+      
+      {/* 2. إضافة القسم هنا */}
+      <TestimonialsSection />
+      
       <ContactSection />
     </>
   );

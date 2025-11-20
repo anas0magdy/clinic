@@ -4,7 +4,7 @@ import { Phone, WhatsApp, Facebook, Instagram } from './Icons';
 
 function FloatingSocials() {
   const phoneNumber = '+201065957501';
-  const whatsappNumber = '+201065957501';
+  const whatsappNumber = '201065957501';
   
   const facebookLink = 'https://www.facebook.com/share/1EM5iPsj13/?mibextid=wwXIfr';
   const instagramLink = 'https://www.instagram.com/dr.hams_samy'; 

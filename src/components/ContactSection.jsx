@@ -3,7 +3,7 @@ import { WhatsApp } from './Icons';
 import './ContactSection.css';
 
 function ContactSection() {
-  const whatsappNumber = '+201065957501'; 
+  const whatsappNumber = '201065957501'; 
   
   return (
     <section id="contact-section" className="contact-section-wrapper">
@@ -19,7 +19,7 @@ function ContactSection() {
           rel="noopener noreferrer"
         >
           <WhatsApp />
-          <span>احجزي موعدك الآن ()</span>
+          <span>احجز موعدك الآن </span>
         </a>
       </div>
     </section>
