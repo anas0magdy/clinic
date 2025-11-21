@@ -3,6 +3,9 @@
   color: #f4f4f4;
   padding-top: 3rem;
   margin-top: 2rem;
+  /* تأكد من الاتجاه حسب اللغة */
+  direction: var(--dir); 
+  text-align: start;
 }
 
 .footer-content {
@@ -30,31 +33,31 @@
 .footer-info {
   flex: 1;
   min-width: 300px;
-  /* محاذاة حسب اللغة */
-  text-align: start; 
 }
 
 .footer-info h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 800;
+  /* تعديل اللون ليكون أوضح (سماوي) */
+  color: #38b6ff; 
   margin-bottom: 1rem;
 }
 
 .footer-info p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #ccc;
+  color: #e0e0e0; /* تفتيح لون النص العادي قليلاً */
   margin-bottom: 0.8rem;
 }
 
 .footer-info a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-info a:hover {
-  color: var(--primary-color);
+  color: #38b6ff; /* نفس اللون السماوي عند الهوفر */
   text-decoration: underline;
 }
 
@@ -63,6 +66,8 @@
   padding: 1.5rem 0;
   margin-top: 2rem;
   border-top: 1px solid #003366;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
 @media (max-width: 768px) {
