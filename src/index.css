@@ -1,4 +1,3 @@
-/* إضافة متغيرات ألوان احترافية */
 :root {
   --primary-color: #007bff;
   --primary-dark: #0056b3;
@@ -15,14 +14,13 @@
 }
 
 body {
-  /* استخدام خط احترافي */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: var(--bg-white);
   color: var(--text-dark);
   
-  /* <<< أهم تعديل: ضبط اتجاه الموقع بالكامل لليمين >>> */
-  direction: rtl;
-  text-align: right;
+  /* مسحنا direction و text-align من هنا */
+  /* سيتم التحكم بها عبر LanguageContext */
+  overflow-x: hidden; /* لمنع السكرول العرضي */
 }
 
 a {

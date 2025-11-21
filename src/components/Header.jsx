@@ -1,35 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import Logo from './Logo'; 
+import { useLanguage } from '../context/LanguageContext'; // استيراد الخطاف
 import './Header.css';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // استخدام الترجمة
+  const { t, toggleLanguage, lang } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const handleLinkClick = () => setIsMobileMenuOpen(false);
 
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
-      
       <div className="header-container">
-        {/* اللوجو (مكون Logo مش محتاج تعديل صور، لكن لو استخدمت img تأكد من المسار) */}
         <div className="logo-wrapper">
           <Logo />
         </div>
@@ -47,52 +42,34 @@ function Header() {
         <nav className={`nav-menu ${isMobileMenuOpen ? "mobile-open" : ""}`}>
           <ul>
             <li>
-              <Link
-                activeClass="active"
-                to="new-hero-section"
-                spy={true} smooth={true} duration={500} offset={-100}
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
-                الرئيسية
+              <Link activeClass="active" to="new-hero-section" spy={true} smooth={true} duration={500} offset={-100} className="nav-link" onClick={handleLinkClick}>
+                {t.nav.home}
               </Link>
             </li>
             <li>
-              <Link
-                activeClass="active"
-                to="about-section"
-                spy={true} smooth={true} duration={500} offset={-100}
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
-                عن الدكتور
+              <Link activeClass="active" to="about-section" spy={true} smooth={true} duration={500} offset={-100} className="nav-link" onClick={handleLinkClick}>
+                {t.nav.about}
               </Link>
             </li>
             <li>
-              <Link
-                activeClass="active"
-                to="services-section"
-                spy={true} smooth={true} duration={500} offset={-100}
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
-                خدماتنا
+              <Link activeClass="active" to="services-section" spy={true} smooth={true} duration={500} offset={-100} className="nav-link" onClick={handleLinkClick}>
+                {t.nav.services}
               </Link>
             </li>
             <li>
-              <Link
-                to="contact-section"
-                spy={true} smooth={true} duration={500} offset={-100}
-                className="nav-link book-btn"
-                onClick={handleLinkClick}
-              >
-                احجز موعد
+              <Link to="contact-section" spy={true} smooth={true} duration={500} offset={-100} className="nav-link book-btn" onClick={handleLinkClick}>
+                {t.nav.book}
               </Link>
+            </li>
+            {/* زر تغيير اللغة */}
+            <li>
+              <button onClick={toggleLanguage} className="lang-switch-btn">
+                {lang === 'ar' ? 'English' : 'عربي'}
+              </button>
             </li>
           </ul>
         </nav>
       </div>
-
     </header>
   );
 }
