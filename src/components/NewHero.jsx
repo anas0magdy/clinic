@@ -42,7 +42,7 @@ function NewHero() {
       </div>
       <div className="hero-image-area">
         <img 
-          src="images/doctor-hero.jpg" 
+          src="images/doctor-hero2.jpg" 
           alt="د. همس سامي"
           className="hero-image"
         />
