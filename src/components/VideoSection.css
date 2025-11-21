@@ -1,0 +1,140 @@
+.video-section {
+  padding: 5rem 2rem;
+  background-color: #002a5c; /* خلفية كحلي غامق لتعطي طابع سينمائي */
+  color: white;
+  direction: rtl;
+}
+
+.video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.video-text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.video-subtitle {
+  color: #4dabf7; /* أزرق فاتح */
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.video-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.video-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.video-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-icon {
+  background-color: #4dabf7;
+  color: #002a5c;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Video Wrapper Styles */
+.video-wrapper {
+  flex: 1.2;
+  min-width: 300px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse-glow 2s infinite;
+}
+
+.play-button-overlay:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  color: white;
+  font-size: 2rem;
+  margin-left: 5px; /* Centering fix */
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+@media (max-width: 900px) {
+  .video-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .video-features {
+    align-items: center; /* Center items in mobile */
+  }
+  
+  .video-title {
+    font-size: 2rem;
+  }
+}

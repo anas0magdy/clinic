@@ -1,10 +1,10 @@
 import React from 'react';
 
-// استيراد جميع الأقسام
 import NewHero from '../components/NewHero';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
-import TestimonialsSection from '../components/TestimonialsSection'; // 1. استيراد القسم الجديد
+import VideoSection from '../components/VideoSection'; // 1. استيراد الفيديو
+import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 
 function HomePage() {
@@ -14,9 +14,10 @@ function HomePage() {
       <AboutSection />
       <ServicesSection />
       
-      {/* 2. إضافة القسم هنا */}
-      <TestimonialsSection />
+      {/* 2. وضع الفيديو بعد الخدمات مباشرة */}
+      <VideoSection />
       
+      <TestimonialsSection />
       <ContactSection />
     </>
   );
