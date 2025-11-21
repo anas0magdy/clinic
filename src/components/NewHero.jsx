@@ -6,15 +6,27 @@ function NewHero() {
   return (
     <section id="new-hero-section" className="new-hero-section fade-in">
       <div className="hero-content-area">
-        <span className="hero-subtitle">
-           أول طبيبة مصرية في الجمعية العالمية لجراحات تصحيح الإبصار <span className="english-text">(ISRS) EG</span>
-        </span>
+        {/* العضويات العالمية */}
+        <div className="hero-badges">
+          <span className="hero-subtitle">
+            أول طبيبة مصرية عضو في الجمعية العالمية لجراحات تصحيح الإبصار <span className="english-text">(ISRS)</span>
+          </span>
+          <span className="hero-subtitle secondary">
+            وعضو الجمعية الأوروبية لجفاف العين
+          </span>
+        </div>
         
         <h1 className="hero-title">د. هـمـس سـامـي</h1>
         
+        {/* الشعار الجديد */}
+        <h2 className="hero-slogan">
+          معايير عالمية… برعاية طبية على أرض مصرية.
+        </h2>
+
         <p className="hero-description">
-          رؤية أوضح، وحياة خالية من ألم الجفاف.
-          نقدم لك أحدث بروتوكولات علاج جفاف العين نهائياً، وتقنيات تصحيح الإبصار العالمية، لأن عينك تستحق أفضل رعاية.
+          خبرة متخصصة في أمراض سطح العين وأمراض القرنية، مع تميّز في جراحات سطح العين وتقنيات تصحيح الإبصار المتقدمة، مدعومة بأحدث بروتوكولات علاج جفاف العين عالمياً.
+          <br />
+          رعاية طبية راقية مبنية على العلم والخبرة لضمان تجربة علاجية متقدمة ونتائج ترتقي بتوقعاتك.
         </p>
         
         <Link 
@@ -30,7 +42,7 @@ function NewHero() {
       </div>
       <div className="hero-image-area">
         <img 
-          src="images/doctor-hero.png" 
+          src="images/doctor-hero.jpg" 
           alt="د. همس سامي"
           className="hero-image"
         />

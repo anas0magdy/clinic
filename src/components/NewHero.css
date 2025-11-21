@@ -2,62 +2,82 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   min-height: 90vh;
-  padding: 2rem 4rem;
+  padding: 4rem 4rem; /* زيادة المساحة قليلاً */
   background-color: #f9fcff;
   overflow: hidden;
-  /* ضمان الاتجاه لليمين */
   direction: rtl;
   text-align: right;
 }
 
 .hero-content-area {
-  flex: 1;
-  max-width: 550px;
+  flex: 1.2; /* إعطاء مساحة أكبر للنص */
+  max-width: 650px;
   animation: slideInUp 0.7s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
 }
 
-.hero-subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  display: block;
-  margin-bottom: 0.5rem;
+.hero-badges {
+  margin-bottom: 1rem;
 }
 
-/* تنسيق خاص للنص الإنجليزي داخل العربي */
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.3rem;
+  background: #eef7ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.hero-subtitle.secondary {
+  color: #002a5c;
+  background: transparent;
+  padding: 0;
+}
+
 .english-text {
   font-family: sans-serif;
   font-weight: bold;
   direction: ltr;
-  unicode-bidi: embed; /* يضمن ظهور الأقواس بشكل صحيح */
+  unicode-bidi: embed;
   margin-right: 5px;
 }
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #002a5c;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
+.hero-slogan {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border-right: 4px solid var(--primary-color);
+  padding-right: 10px;
+}
+
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-light);
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 2rem;
-  /* هذا السطر يضمن أن السطر الأخير القصير يظل على اليمين */
-  text-align: right; 
+  text-align: right;
 }
 
 .hero-cta-button {
   background-color: var(--primary-color);
   color: white;
-  padding: 0.9rem 2rem;
-  border-radius: 8px;
+  padding: 0.9rem 2.5rem;
+  border-radius: 50px;
   font-size: 1.1rem;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -121,28 +141,40 @@
   to { transform: scale(1.2) rotate(360deg); }
 }
 
-/* --- تصميم الموبايل --- */
 @media (max-width: 768px) {
   .new-hero-section {
     flex-direction: column-reverse;
     padding: 2rem 1.5rem;
-    min-height: auto;
-    /* في الموبايل ممكن نخلي الكلام في النص لو تحب، لكن اليمين أفضل للقراءة */
     text-align: center; 
+    gap: 2rem;
   }
   
-  .hero-description {
-     text-align: center; /* في الموبايل توسيط الوصف */
+  .hero-content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-subtitle {
+    width: auto;
+    font-size: 0.9rem;
+  }
+
+  .hero-description, .hero-slogan {
+     text-align: center;
+  }
+  
+  .hero-slogan {
+    border-right: none;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    padding-right: 0;
   }
 
   .hero-title {
-    font-size: 2.5rem;
-  }
-  .hero-description {
-    font-size: 1rem;
+    font-size: 2.2rem;
   }
   .hero-image-area {
     width: 80%;
-    margin-bottom: 2rem;
   }
 }
