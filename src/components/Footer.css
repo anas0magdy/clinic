@@ -1,5 +1,5 @@
 .site-footer-main {
-  background-color: #001f48; /* لون أزرق غامق جداً */
+  background-color: #001f48;
   color: #f4f4f4;
   padding-top: 3rem;
   margin-top: 2rem;
@@ -7,7 +7,7 @@
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap; /* للسماح بالتجاوب */
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -16,26 +16,27 @@
 }
 
 .footer-map {
-  flex: 1; /* يأخذ نصف المساحة */
-  min-width: 300px; /* أقل عرض */
+  flex: 1;
+  min-width: 300px;
   height: 300px;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .footer-map iframe {
-  filter: grayscale(80%) invert(90%); /* ستايل احترافي للخريطة (أبيض وأسود معكوس) */
+  filter: grayscale(80%) invert(90%);
 }
 
 .footer-info {
-  flex: 1; /* النصف الثاني */
+  flex: 1;
   min-width: 300px;
-  text-align: right;
+  /* محاذاة حسب اللغة */
+  text-align: start; 
 }
 
 .footer-info h3 {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
@@ -61,7 +62,7 @@
   text-align: center;
   padding: 1.5rem 0;
   margin-top: 2rem;
-  border-top: 1px solid #003366; /* خط فاصل */
+  border-top: 1px solid #003366;
 }
 
 @media (max-width: 768px) {

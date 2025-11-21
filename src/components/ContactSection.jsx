@@ -1,25 +1,27 @@
 import React from 'react';
 import { WhatsApp } from './Icons'; 
+import { useLanguage } from '../context/LanguageContext';
 import './ContactSection.css';
 
 function ContactSection() {
+  const { t } = useLanguage();
   const whatsappNumber = '201065957501'; 
   
   return (
     <section id="contact-section" className="contact-section-wrapper">
-      <h2 className="section-title">رجّع لعينك راحتها</h2>
+      <h2 className="section-title">{t.contact.title}</h2>
       <p className="contact-subtitle">
-        متستحملش الجفاف والصداع اكتر من كدا. اضغط لحجز كشفك أو جلستك عبر واتساب.
+        {t.contact.subtitle}
       </p>
       <div className="contact-content">
         <a 
-          href={`https://api.whatsapp.com/send?phone=${whatsappNumber}`}
+          href={`https://wa.me/${whatsappNumber}`}
           className="contact-whatsapp-button"
           target="_blank"
           rel="noopener noreferrer"
         >
           <WhatsApp />
-          <span>احجز موعدك الآن </span>
+          <span>{t.contact.btn}</span>
         </a>
       </div>
     </section>

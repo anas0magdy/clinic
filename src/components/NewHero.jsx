@@ -1,32 +1,33 @@
 import React from 'react';
 import { Link } from 'react-scroll'; 
+import { useLanguage } from '../context/LanguageContext'; 
 import './NewHero.css';
 
 function NewHero() {
+  const { t, lang } = useLanguage();
+
   return (
     <section id="new-hero-section" className="new-hero-section fade-in">
       <div className="hero-content-area">
-        {/* العضويات العالمية */}
         <div className="hero-badges">
           <span className="hero-subtitle">
-            أول طبيبة مصرية عضو في الجمعية العالمية لجراحات تصحيح الإبصار <span className="english-text">(ISRS)</span>
+            {t.hero.badge1} 
+            {lang === 'ar' && <span className="english-text"> (ISRS)</span>}
           </span>
           <span className="hero-subtitle secondary">
-            وعضو الجمعية الأوروبية لجفاف العين
+            {t.hero.badge2}
           </span>
         </div>
         
-        <h1 className="hero-title">د. هـمـس سـامـي</h1>
+        {/* استخدام الاسم المترجم هنا */}
+        <h1 className="hero-title">{t.hero.name}</h1>
         
-        {/* الشعار الجديد */}
         <h2 className="hero-slogan">
-          معايير عالمية… برعاية طبية على أرض مصرية.
+          {t.hero.slogan}
         </h2>
 
         <p className="hero-description">
-          خبرة متخصصة في أمراض سطح العين وأمراض القرنية، مع تميّز في جراحات سطح العين وتقنيات تصحيح الإبصار المتقدمة، مدعومة بأحدث بروتوكولات علاج جفاف العين عالمياً.
-          <br />
-          رعاية طبية راقية مبنية على العلم والخبرة لضمان تجربة علاجية متقدمة ونتائج ترتقي بتوقعاتك.
+          {t.hero.description}
         </p>
         
         <Link 
@@ -37,13 +38,13 @@ function NewHero() {
           offset={-80}
           className="hero-cta-button"
         >
-          احجز كشفك الآن
+          {t.hero.cta}
         </Link>
       </div>
       <div className="hero-image-area">
         <img 
           src="images/doctor-hero2.jpg" 
-          alt="د. همس سامي"
+          alt={t.hero.name}
           className="hero-image"
         />
         <div className="hero-image-bg-shape1"></div>

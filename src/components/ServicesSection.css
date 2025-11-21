@@ -1,12 +1,12 @@
 .services-section {
   padding: 4rem 2rem;
-  background-color: #f9fcff; /* خلفية فاتحة */
+  background-color: #f9fcff;
   text-align: center;
 }
 
 .services-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تحسين التجاوب */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -14,44 +14,42 @@
 
 .service-card {
   background: var(--bg-white);
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: all 0.3s ease;
-  /* 1. إضافة border شفاف (للحفاظ على الحجم عند الـ hover) */
   border: 1px solid transparent;
-  /* تحريكة ظهور الكروت بتأخير مختلف */
   animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
 }
 
-/* تأخير تحريكة الكروت (ستايل احترافي) */
-.service-card:nth-child(1) { animation-delay: 0.2s; }
-.service-card:nth-child(2) { animation-delay: 0.4s; }
-.service-card:nth-child(3) { animation-delay: 0.6s; }
-
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
 
 .service-card:hover {
   transform: translateY(-8px);
-  /* 2. تعديل الـ hover effect */
-  box-shadow: 0 12px 30px rgba(0, 123, 255, 0.15); /* ظل أقوى وأزرق */
-  border: 1px solid var(--primary-color); /* إضافة حدود زرقاء */
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.1);
+  border-color: var(--primary-color);
 }
 
 .service-card-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
 .service-card-content {
   padding: 1.5rem;
-  text-align: right;
+  /* محاذاة النص حسب اللغة (Start) */
+  text-align: start; 
 }
 
 .service-card-content h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: #002a5c;
   margin-bottom: 0.8rem;
 }
@@ -62,15 +60,12 @@
   color: var(--text-light);
 }
 
-/* --- تصميم الموبايل --- */
-@media (max-width: 992px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr); /* عمودين للتابلت */
-  }
-}
-
 @media (max-width: 768px) {
   .services-container {
-    grid-template-columns: 1fr; /* عمود واحد للموبايل */
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .service-card-content {
+    text-align: center; /* في الموبايل شكله أحلى في النص */
   }
 }

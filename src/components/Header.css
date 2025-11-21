@@ -1,26 +1,207 @@
-/* ... الكود القديم ... */
+/* --- Base Header Styles --- */
+.site-header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  direction: ltr !important; 
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.logo-wrapper {
+  flex-shrink: 0;
+  cursor: pointer;
+  z-index: 10002;
+}
+
+.header-right-section {
+  display: flex;
+  align-items: center;
+}
+
+/* --- Desktop Menu --- */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+@media (min-width: 993px) {
+  body[dir="rtl"] .nav-menu ul {
+    flex-direction: row-reverse;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link.book-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.book-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
 
 .lang-switch-btn {
   background: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  padding: 5px 15px;
+  padding: 4px 12px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
-  transition: all 0.3s ease;
   font-family: inherit;
+  margin-left: 10px;
 }
 
-.lang-switch-btn:hover {
-  background: var(--primary-color);
-  color: white;
+/* --- Mobile Menu Toggle --- */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10002;
+  margin-left: 15px;
 }
 
-/* تعديل للموبايل */
-@media (max-width: 768px) {
-  .lang-switch-btn {
-    width: 100%;
-    margin-top: 10px;
+.mobile-menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: #002a5c;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- تصميم الموبايل (Dropdown Menu - تحت الهيدر) --- */
+@media (max-width: 992px) {
+  .mobile-menu-toggle {
+    display: flex;
   }
+
+  .nav-menu {
+    /* التغيير هنا: قائمة منسدلة تحت الهيدر */
+    position: absolute;
+    top: 100%; /* تبدأ من نهاية الهيدر */
+    left: 0;
+    width: 100%; /* عرض كامل */
+    height: auto; /* الارتفاع على قد المحتوى بس */
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* ظل خفيف تحتها */
+    border-top: 1px solid #eee;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0; /* مسافة فوق وتحت الكلام */
+    
+    /* إخفاء */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* حركة بسيطة من فوق لتحت */
+    transition: all 0.3s ease-in-out;
+    z-index: 9998; /* أقل من الهيدر نفسه عشان تظهر تحته */
+  }
+
+  .nav-menu.mobile-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* تنسيق العناصر داخل القائمة */
+  .nav-menu ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body[dir="rtl"] .nav-menu ul {
+    flex-direction: column !important;
+  }
+
+  .nav-link {
+    font-size: 1.2rem; /* حجم مناسب مش ضخم */
+    font-weight: 600;
+    color: #333;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .nav-link:hover {
+    background-color: #f9f9f9; /* لون خلفية عند الضغط */
+    color: var(--primary-color);
+  }
+
+  .nav-link.book-btn {
+    width: auto;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    margin: 1rem auto 0;
+    display: inline-block;
+  }
+  
+  .lang-switch-btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin-left: 0;
+  }
+
+  /* X Animation */
+  .mobile-menu-toggle.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .mobile-menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-menu-toggle.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+.site-header.scrolled {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }

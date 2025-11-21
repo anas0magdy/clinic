@@ -4,17 +4,16 @@ import { content } from '../translations';
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [lang, setLang] = useState('ar'); // اللغة الافتراضية عربي
+  const [lang, setLang] = useState('ar');
 
   useEffect(() => {
-    // تغيير اتجاه الصفحة تلقائياً
+    // تغيير اتجاه الصفحة
     document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.body.style.textAlign = lang === 'ar' ? 'right' : 'left';
     
-    // تغيير الخط لو حبيت (اختياري)
-    document.body.style.fontFamily = lang === 'ar' 
-      ? "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-      : "'Roboto', sans-serif";
+    // تغيير كلاس الخط في الـ body
+    document.body.classList.remove('font-ar', 'font-en');
+    document.body.classList.add(lang === 'ar' ? 'font-ar' : 'font-en');
       
   }, [lang]);
 
@@ -22,7 +21,6 @@ export const LanguageProvider = ({ children }) => {
     setLang((prev) => (prev === 'ar' ? 'en' : 'ar'));
   };
 
-  // دالة لاسترجاع النص المترجم
   const t = content[lang];
 
   return (

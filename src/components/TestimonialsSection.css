@@ -2,65 +2,15 @@
   padding: 4rem 2rem;
   background-color: #f0f8ff;
   text-align: center;
-  direction: rtl;
+  /* إزالة الاتجاه الثابت */
 }
 
-.testimonials-header {
-  margin-bottom: 3rem;
-}
-
-.testimonials-header .subtitle {
-  color: var(--primary-color);
-  font-weight: bold;
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.testimonials-header .title {
-  font-size: 2.5rem;
-  color: #002a5c;
-  font-weight: 800;
-}
-
-.testimonials-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* تصميم كارت الصورة */
-.review-card-image {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden; /* عشان الصورة متخرجش بره الحواف */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eee;
-  height: auto; /* الارتفاع حسب الصورة */
-}
-
-.review-card-image:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-.review-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain; /* تضمن ظهور الصورة بالكامل */
-}
-
-@media (max-width: 768px) {
-  .testimonials-header .title {
-    font-size: 2rem;
-  }
-  
-  .testimonials-container {
-    grid-template-columns: 1fr; /* عمود واحد في الموبايل */
-    padding: 0 1rem;
-  }
-}
+/* ... باقي التنسيق كما هو ... */
+.testimonials-header { margin-bottom: 3rem; }
+.testimonials-header .subtitle { color: var(--primary-color); font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 0.5rem; }
+.testimonials-header .title { font-size: 2.5rem; color: #002a5c; font-weight: 800; }
+.testimonials-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+.review-card-image { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #eee; height: auto; }
+.review-card-image:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); }
+.review-img { width: 100%; height: auto; display: block; object-fit: contain; }
+@media (max-width: 768px) { .testimonials-header .title { font-size: 2rem; } .testimonials-container { grid-template-columns: 1fr; padding: 0 1rem; } }

@@ -1,8 +1,9 @@
 .video-section {
   padding: 5rem 2rem;
-  background-color: #002a5c; /* خلفية كحلي غامق لتعطي طابع سينمائي */
+  background-color: #002a5c;
   color: white;
-  direction: rtl;
+  /* الاتجاه يتبع اللغة */
+  text-align: start;
 }
 
 .video-container {
@@ -20,7 +21,7 @@
 }
 
 .video-subtitle {
-  color: #4dabf7; /* أزرق فاتح */
+  color: #4dabf7;
   font-weight: bold;
   font-size: 1.1rem;
   display: block;
@@ -67,7 +68,7 @@
   font-weight: bold;
 }
 
-/* Video Wrapper Styles */
+/* Video Wrapper */
 .video-wrapper {
   flex: 1.2;
   min-width: 300px;
@@ -83,7 +84,6 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 20px;
 }
 
 .play-button-overlay {
@@ -91,9 +91,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* ... rest of styles ... */
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -101,26 +100,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  animation: pulse-glow 2s infinite;
-}
-
-.play-button-overlay:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .play-icon {
   color: white;
   font-size: 2rem;
-  margin-left: 5px; /* Centering fix */
-}
-
-@keyframes pulse-glow {
-  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-  70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  /* إصلاح محاذاة الأيقونة حسب الاتجاه */
+  margin-inline-start: 5px; 
 }
 
 @media (max-width: 900px) {
@@ -129,11 +115,9 @@
     text-align: center;
     gap: 2rem;
   }
-  
   .video-features {
-    align-items: center; /* Center items in mobile */
+    align-items: center;
   }
-  
   .video-title {
     font-size: 2rem;
   }

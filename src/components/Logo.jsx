@@ -2,40 +2,50 @@ import React from 'react';
 
 const Logo = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', lineHeight: '1.2' }}>
-      {/* أيقونة العين الفنية - SVG */}
-      <svg width="55" height="55" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* دائرة خلفية خفيفة */}
-        <circle cx="50" cy="50" r="48" stroke="#007bff" strokeWidth="2" fill="#f0f8ff" opacity="0.3" />
+    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      {/* الأيقونة الجديدة: تصميم تجريدي للعين (Abstract Eye) */}
+      <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* القوس العلوي (الجفن/القرنية) بلون أزرق داكن */}
+        <path 
+          d="M10 50C10 50 30 20 90 20" 
+          stroke="#002a5c" 
+          strokeWidth="6" 
+          strokeLinecap="round"
+        />
         
-        {/* رسمة العين */}
-        <path d="M15 50C15 50 30 25 50 25C70 25 85 50 85 50C85 50 70 75 50 75C30 75 15 50 15 50Z" stroke="#002a5c" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="white"/>
-        <circle cx="50" cy="50" r="12" fill="#007bff" />
-        <circle cx="54" cy="46" r="4" fill="white" />
+        {/* القوس السفلي بلون أزرق فاتح ليعطي تداخل وانسيابية */}
+        <path 
+          d="M10 50C10 50 40 80 90 50" 
+          stroke="#007bff" 
+          strokeWidth="6" 
+          strokeLinecap="round" 
+        />
         
-        {/* حرف H منمق داخل العين أو فوقها (اختياري) */}
-        <path d="M50 20V10M50 90V80" stroke="#007bff" strokeWidth="2" />
+        {/* البؤبؤ (نقطة التركيز) */}
+        <circle cx="65" cy="45" r="8" fill="#002a5c" />
+        
+        {/* لمعة صغيرة في العين للحيوية */}
+        <circle cx="68" cy="42" r="2.5" fill="white" />
       </svg>
 
-      {/* النصوص تحت اللوجو */}
-      <div style={{ marginTop: '6px' }}>
+      {/* النصوص (بجانب اللوجو ليكون العرض متناسقاً، أو تحته حسب الرغبة) */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: '1.2' }}>
         <span style={{ 
-          display: 'block', 
-          fontSize: '1.2rem', 
+          fontSize: '1.4rem', 
           fontWeight: '800', 
           color: '#002a5c',
-          fontFamily: "'Segoe UI', sans-serif"
+          fontFamily: "'Segoe UI', sans-serif",
+          letterSpacing: '-0.5px'
         }}>
           د. هـمـس سـامـي
         </span>
         <span style={{ 
-          display: 'block', 
-          fontSize: '0.75rem', 
-          color: '#555',
+          fontSize: '0.85rem', 
+          color: '#007bff',
           fontWeight: '600',
           letterSpacing: '0.5px'
         }}>
-          طب وجراحة العيون
+          استشاري طب وجراحة العيون
         </span>
       </div>
     </div>

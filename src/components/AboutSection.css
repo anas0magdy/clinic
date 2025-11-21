@@ -1,16 +1,16 @@
 .about-section {
   padding: 4rem 2rem;
   background-color: var(--bg-white);
-  text-align: center;
 }
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #002a5c;
   margin-bottom: 2.5rem;
   position: relative;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 .section-title::after {
@@ -23,14 +23,14 @@
   margin: 0.5rem auto 0;
 }
 
-/* 1. تعديل ليناسب التصميم الجديد (صورة + نص) */
 .about-section-content {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  text-align: right; /* نص عربي */
+  gap: 4rem;
+  /* تم حذف text-align: right للسماح بالتبديل التلقائي */
+  text-align: start; 
 }
 
 .about-image {
@@ -40,18 +40,17 @@
 
 .about-image img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-  flex: 1;
+  flex: 1.2;
 }
-/* نهاية التعديلات 1 */
 
 .about-text h3 {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
@@ -74,28 +73,39 @@
   margin-bottom: 1rem;
   line-height: 1.6;
   position: relative;
-  padding-right: 1.5rem; /* مسافة للـ icon */
+  /* استخدام padding منطقي */
+  padding-inline-start: 1.5rem; 
 }
 
-/* 2. إضافة أيقونة "صح" للشهادات */
+/* أيقونة القائمة */
 .about-text ul li::before {
-  content: '✓'; /* أيقونة صح */
+  content: '✓';
   color: var(--primary-color);
   font-weight: bold;
   position: absolute;
-  right: 0;
+  /* مكان الأيقونة يتغير حسب اللغة */
+  inset-inline-start: 0; 
   top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .about-section-content {
-    flex-direction: column; /* صورة فوق والنص تحت */
+    flex-direction: column; 
     text-align: center;
+    gap: 2rem;
   }
   .about-text {
-    text-align: right;
+    text-align: center;
   }
   .about-text ul li {
-    padding-right: 1.5rem; /* إبقاء المسافة */
+    padding-inline-start: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  /* في الموبايل نخلي الأيقونة جنب الكلام */
+  .about-text ul li::before {
+    position: relative;
+    margin-inline-end: 8px;
+    inset-inline-start: auto;
   }
 }

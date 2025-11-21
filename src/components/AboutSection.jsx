@@ -1,40 +1,41 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './AboutSection.css';
 
 function AboutSection() {
+  // استدعاء دالة الترجمة
+  const { t } = useLanguage();
+
   return (
     <section id="about-section" className="about-section slide-in-up">
-      <h2 className="section-title">عن الدكتور</h2>
+      {/* استخدام المتغيرات بدلاً من النص الثابت */}
+      <h2 className="section-title">{t.about.title}</h2>
       <div className="about-section-content">
         <div className="about-image">
           <img 
             src="images/clinic-photo2.jpg" 
-            alt="د. همس سامي" 
+            alt="Dr. Hams Samy" 
           />
         </div>
         <div className="about-text">
-          <h3>د. هـمـس سـامـي</h3>
+          <h3>{t.about.name}</h3>
           <p className="about-intro">
-            أخصائي طب وجراحة العيون، ومتخصصة في أمراض سطح العين وأمراض القرنية وجراحات سطح العين وتقنيات تصحيح الإبصار الحديثة.
+            {t.about.intro}
           </p>
           
           <div className="about-description">
-            <p>
-              تُعد د. همس <strong>أول طبيبة مصرية تنضم إلى الجمعية العالمية لجراحات تصحيح الإبصار (ISRS)</strong>، إلى جانب عضويتها في الجمعية الأوروبية لجفاف العين.
-            </p>
-            <p>
-              تُعد د. همس من روّاد علاج جفاف العين في مصر؛ حيث قامت بتأسيس عيادات متخصصة لجفاف العين في أكثر من مستشفى كبرى، لتكون من أوائل من أدخلوا برامج التشخيص المتقدم والبروتوكولات العالمية لعلاج أمراض سطح العين.
-            </p>
+            <p>{t.about.desc1}</p>
+            <p>{t.about.desc2}</p>
           </div>
 
           <ul>
             <li>
-              <strong>النشاط العلمي:</strong>
-              <span> شاركت في العديد من المؤتمرات الدولية، وقدمت خبراتها في جلسات تناقش أحدث تطورات علاج الجفاف وتصحيح الإبصار.</span>
+              <strong>{t.about.activityTitle}</strong>
+              <span> {t.about.activityText}</span>
             </li>
             <li>
-              <strong>النهج الطبي:</strong>
-              <span> فهم الأسباب العميقة للمشكلة وليس فقط التعامل مع الأعراض، لضمان نتائج مميزة ورعاية طبية راقية.</span>
+              <strong>{t.about.approachTitle}</strong>
+              <span> {t.about.approachText}</span>
             </li>
           </ul>
         </div>
