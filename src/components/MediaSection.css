@@ -2,7 +2,6 @@
   padding: 5rem 2rem;
   background-color: #f8f9fa;
   text-align: center;
-  /* الاتجاه حسب اللغة */
   direction: var(--dir); 
 }
 
@@ -36,7 +35,6 @@
 /* --- Video Grid --- */
 .videos-grid {
   display: grid;
-  /* كروت متجاوبة: عمود واحد في الموبايل، 3 في الديسكتوب */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
@@ -49,17 +47,17 @@
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .media-card:hover {
   transform: translateY(-5px);
 }
 
-/* --- The Fix: Responsive Video Container --- */
 .youtube-wrapper {
   position: relative;
   width: 100%;
-  /* النسبة السحرية 16:9 لمنع الفراغات */
   padding-bottom: 56.25%; 
   height: 0;
   background: #000;
@@ -72,6 +70,26 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* تنسيق الكوتس (العناوين) */
+.media-info {
+  padding: 1.5rem;
+  text-align: start;
+  border-top: 1px solid #eee;
+  background-color: #ffffff; /* خلفية بيضاء */
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+.media-info p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #002a5c; /* لون كحلي واضح */
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* --- Podcast --- */
@@ -92,7 +110,6 @@
   .media-header .title {
     font-size: 2rem;
   }
-  /* في الموبايل الفيديوهات هتبقى تحت بعض مظبوطة */
   .videos-grid {
     grid-template-columns: 1fr;
   }

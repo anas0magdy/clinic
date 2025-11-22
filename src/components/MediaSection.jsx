@@ -5,11 +5,10 @@ import './MediaSection.css';
 function MediaSection() {
   const { t } = useLanguage();
 
-  // قائمة الفيديوهات (IDs من اللينكات اللي بعتها)
   const videos = [
-    { id: "NujjnCYnSY0", title: "أضرار المكياج وجفاف العين" },
-    { id: "e1AUG4nORW8", title: "الفرق بين الليزك والفيمتو سمايل" },
-    { id: "lI_hTsFN18Y", title: "نصائح هامة لصحة العين" }
+    { id: "NujjnCYnSY0", title: "أضرار المكياج وجفاف العين وكيفية الوقاية" },
+    { id: "e1AUG4nORW8", title: "الفرق بين الليزك والفيمتو سمايل وتصحيح الإبصار" },
+    { id: "lI_hTsFN18Y", title: "نصائح هامة للحفاظ على صحة العين" }
   ];
 
   return (
@@ -21,7 +20,6 @@ function MediaSection() {
       </div>
 
       <div className="media-container">
-        {/* 1. شبكة الفيديوهات */}
         <div className="videos-grid">
           {videos.map((video, index) => (
             <div key={index} className="media-card">
@@ -34,11 +32,14 @@ function MediaSection() {
                   allowFullScreen
                 ></iframe>
               </div>
+              {/* هذا هو الجزء الذي كان ناقصاً: عرض العنوان (الكوت) */}
+              <div className="media-info">
+                <p>{video.title}</p>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* 2. مشغل البودكاست */}
         <div className="podcast-container">
           <h3 className="podcast-title">🎙️ {t.media.listenBtn}</h3>
           <iframe 
