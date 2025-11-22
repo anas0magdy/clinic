@@ -59,6 +59,12 @@ export const content = {
     footer: {
       address: "52 شارع أبو العتاهية، امتداد عباس العقاد، مدينة نصر، القاهرة.",
       rights: "جميع الحقوق محفوظة ©"
+    },
+    media: {
+      subtitle: "التوعية الطبية",
+      title: "د. همس في الإعلام",
+      desc: "مجموعة من اللقاءات التليفزيونية وحلقات البودكاست تناقش فيها د. همس أحدث النصائح الطبية لصحة عينيك.",
+      listenBtn: "استمع للبودكاست"
     }
   },
   
@@ -124,6 +130,12 @@ export const content = {
     footer: {
       address: "52 Abu El Atahiya St, Abbas El Akkad Ext, Nasr City, Cairo.",
       rights: "All rights reserved ©"
+    },
+    media: {
+      subtitle: "Medical Awareness",
+      title: "Dr. Hams in Media",
+      desc: "A collection of TV interviews and podcast episodes where Dr. Hams discusses the latest medical advice for your eye health.",
+      listenBtn: "Listen to Podcast"
     }
   }
 };

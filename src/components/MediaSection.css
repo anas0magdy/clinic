@@ -1,0 +1,99 @@
+.media-section {
+  padding: 5rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  /* الاتجاه حسب اللغة */
+  direction: var(--dir); 
+}
+
+.media-header {
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-header .subtitle {
+  color: var(--primary-color);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.media-header .title {
+  font-size: 2.5rem;
+  color: #002a5c;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.media-header .description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* --- Video Grid --- */
+.videos-grid {
+  display: grid;
+  /* كروت متجاوبة: عمود واحد في الموبايل، 3 في الديسكتوب */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+}
+
+.media-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+}
+
+/* --- The Fix: Responsive Video Container --- */
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  /* النسبة السحرية 16:9 لمنع الفراغات */
+  padding-bottom: 56.25%; 
+  height: 0;
+  background: #000;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Podcast --- */
+.podcast-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: start;
+}
+
+.podcast-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #002a5c;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .media-header .title {
+    font-size: 2rem;
+  }
+  /* في الموبايل الفيديوهات هتبقى تحت بعض مظبوطة */
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
