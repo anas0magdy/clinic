@@ -4,6 +4,7 @@ export const content = {
       home: "الرئيسية",
       about: "عن الدكتورة",
       services: "خدماتنا",
+      media: "مكتبة الميديا",
       book: "احجز موعد",
       langBtn: "English"
     },
@@ -32,7 +33,7 @@ export const content = {
       s1_desc: "إجراء عمليات الليزك وتصحيح الإبصار بأحدث التقنيات العالمية لضمان رؤية ممتازة والاستغناء عن النظارة.",
       s2_title: "القرنية المخروطية",
       s2_desc: "عمليات تثبيت وزراعة الحلقات لحالات القرنية المخروطية لتقوية القرنية وتحسين جودة الرؤية.",
-      s3_title: "علاج جفاف العين وأمراض سطح العين",
+      s3_title: "علاج جفاف العين وأمراض السطح",
       s3_desc: "أحدث فحوصات لتشخيص وعلاج أسباب وأنواع جفاف العين وجميع أمراض سطح العين بأحدث التقنيات.",
       s4_title: "فحص شامل للعين",
       s4_desc: "فحص روتيني دقيق للاطمئنان على صحة العين، الشبكية، والقرنية، والكشف المبكر عن أي مشاكل.",
@@ -47,6 +48,16 @@ export const content = {
       f2: "تستغرق دقائق معدودة",
       f3: "تعافي سريع جداً"
     },
+    // قسم الميديا (تم إضافة عناوين الفيديوهات هنا)
+    media: {
+      subtitle: "التوعية الطبية",
+      title: "د. همس في الإعلام",
+      desc: "مجموعة من اللقاءات التليفزيونية وحلقات البودكاست تناقش فيها د. همس أحدث النصائح الطبية لصحة عينيك.",
+      listenBtn: "استمع للبودكاست",
+      video1: "أضرار المكياج وجفاف العين وكيفية الوقاية",
+      video2: "الفرق بين الليزك والفيمتو سمايل وتصحيح الإبصار",
+      video3: "نصائح هامة للحفاظ على صحة العين"
+    },
     reviews: {
       subtitle: "آراء عملائنا",
       title: "ماذا قال مرضانا؟"
@@ -59,21 +70,16 @@ export const content = {
     footer: {
       address: "52 شارع أبو العتاهية، امتداد عباس العقاد، مدينة نصر، القاهرة.",
       rights: "جميع الحقوق محفوظة ©"
-    },
-    media: {
-      subtitle: "التوعية الطبية",
-      title: "د. همس في الإعلام",
-      desc: "مجموعة من اللقاءات التليفزيونية وحلقات البودكاست تناقش فيها د. همس أحدث النصائح الطبية لصحة عينيك.",
-      listenBtn: "استمع للبودكاست"
     }
   },
   
-  // === English Translation (New Text Applied) ===
+  // === English Translation ===
   en: {
     nav: {
       home: "Home",
-      about: "About Dr.",
+      about: "About Us",
       services: "Services",
+      media: "Media Center",
       book: "Book Now",
       langBtn: "عربي"
     },
@@ -88,7 +94,6 @@ export const content = {
     about: {
       title: "About Us",
       name: "Dr. Hams Samy",
-      // تم تحديث النصوص هنا بالنص الإنجليزي الذي طلبته
       intro: "Ophthalmologist specialized in ocular surface diseases, corneal disorders, ocular surface surgeries, and advanced vision-correction techniques.",
       desc1: "Dr. Hams is the first Egyptian female ophthalmologist to join the International Society of Refractive Surgery (ISRS), in addition to being a member of the European Dry Eye Society, reflecting her commitment to global standards of excellence.",
       desc2: "Recognized as one of the pioneers of Dry Eye management in Egypt, Dr. Hams founded dedicated Dry Eye Clinics across several major hospitals, introducing advanced diagnostic technologies and world-class treatment protocols for ocular surface diseases.",
@@ -103,10 +108,10 @@ export const content = {
       s1_desc: "Advanced LASIK and vision correction procedures using global technologies for excellent vision freedom.",
       s2_title: "Keratoconus Management",
       s2_desc: "Corneal cross-linking and ring implantation surgeries for Keratoconus to strengthen the cornea and improve vision.",
-      s3_title: "Dry Eye & Eye Surface Diseases",
+      s3_title: "Dry Eye & Surface Diseases",
       s3_desc: "Latest diagnostics and treatments for dry eye causes and all ocular surface diseases using advanced technologies.",
       s4_title: "Comprehensive Eye Exam",
-      s4_desc: "Detailed routine examination to check , Overall eye health, and early detection of medical conditions.",
+      s4_desc: "Detailed routine examination to check Overall eye health, and early detection of medical conditions.",
       s5_title: "Glaucoma & IOP Monitoring",
       s5_desc: "Diagnosis and monitoring of glaucoma and intraocular pressure to preserve the optic nerve."
     },
@@ -117,6 +122,16 @@ export const content = {
       f1: "Topical Anesthesia (Pain-free)",
       f2: "Takes only minutes",
       f3: "Very fast recovery"
+    },
+    // Media Section (English Translation added)
+    media: {
+      subtitle: "Medical Awareness",
+      title: "Dr. Hams in Media",
+      desc: "A collection of TV interviews and podcast episodes where Dr. Hams discusses the latest medical advice for your eye health.",
+      listenBtn: "Listen to Podcast",
+      video1: "Makeup Risks, Dry Eye, and Prevention",
+      video2: "Difference between LASIK, Femto-Smile & Vision Correction",
+      video3: "Important Tips for Maintaining Eye Health"
     },
     reviews: {
       subtitle: "Testimonials",
@@ -130,12 +145,6 @@ export const content = {
     footer: {
       address: "52 Abu El Atahiya St, Abbas El Akkad Ext, Nasr City, Cairo.",
       rights: "All rights reserved ©"
-    },
-    media: {
-      subtitle: "Medical Awareness",
-      title: "Dr. Hams in Media",
-      desc: "A collection of TV interviews and podcast episodes where Dr. Hams discusses the latest medical advice for your eye health.",
-      listenBtn: "Listen to Podcast"
     }
   }
 };

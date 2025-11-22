@@ -5,10 +5,11 @@ import './MediaSection.css';
 function MediaSection() {
   const { t } = useLanguage();
 
+  // استخدام الترجمة للعناوين بدلاً من النص الثابت
   const videos = [
-    { id: "NujjnCYnSY0", title: "أضرار المكياج وجفاف العين وكيفية الوقاية" },
-    { id: "e1AUG4nORW8", title: "الفرق بين الليزك والفيمتو سمايل وتصحيح الإبصار" },
-    { id: "lI_hTsFN18Y", title: "نصائح هامة للحفاظ على صحة العين" }
+    { id: "NujjnCYnSY0", title: t.media.video1 },
+    { id: "e1AUG4nORW8", title: t.media.video2 },
+    { id: "lI_hTsFN18Y", title: t.media.video3 }
   ];
 
   return (
@@ -32,7 +33,6 @@ function MediaSection() {
                   allowFullScreen
                 ></iframe>
               </div>
-              {/* هذا هو الجزء الذي كان ناقصاً: عرض العنوان (الكوت) */}
               <div className="media-info">
                 <p>{video.title}</p>
               </div>
