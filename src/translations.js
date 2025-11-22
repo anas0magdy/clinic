@@ -81,12 +81,12 @@ export const content = {
       name: "Dr. Hams Samy",
       badge1: "First Egyptian Female Member of the Int. Society of Refractive Surgery (ISRS)",
       badge2: "Member of the European Society of Dry Eye",
-      slogan: "Global Standards… Medical Care on Egyptian Soil.",
+      slogan: "Global Standards… Medical Care on Egyptian Land.",
       description: "Specialized expertise in ocular surface and corneal diseases, excelling in advanced refractive surgeries. Premium medical care based on science and experience to ensure an advanced therapeutic journey.",
       cta: "Book Appointment"
     },
     about: {
-      title: "About The Doctor",
+      title: "About Us",
       name: "Dr. Hams Samy",
       // تم تحديث النصوص هنا بالنص الإنجليزي الذي طلبته
       intro: "Ophthalmologist specialized in ocular surface diseases, corneal disorders, ocular surface surgeries, and advanced vision-correction techniques.",
@@ -106,7 +106,7 @@ export const content = {
       s3_title: "Dry Eye & Eye Surface Diseases",
       s3_desc: "Latest diagnostics and treatments for dry eye causes and all ocular surface diseases using advanced technologies.",
       s4_title: "Comprehensive Eye Exam",
-      s4_desc: "Detailed routine examination to check overall eye health, retina, and cornea, and early detection of issues.",
+      s4_desc: "Detailed routine examination to check , Overall eye health, and early detection of medical conditions.",
       s5_title: "Glaucoma & IOP Monitoring",
       s5_desc: "Diagnosis and monitoring of glaucoma and intraocular pressure to preserve the optic nerve."
     },

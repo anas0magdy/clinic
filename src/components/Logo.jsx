@@ -45,7 +45,7 @@ const Logo = () => {
           fontWeight: '600',
           letterSpacing: '0.5px'
         }}>
-          استشاري طب وجراحة العيون
+           طب وجراحة العيون
         </span>
       </div>
     </div>
