@@ -61,6 +61,11 @@ function Header() {
                 </Link>
               </li>
               <li>
+                <Link activeClass="active" to="media-section" spy={true} smooth={true} duration={500} offset={-100} className="nav-link" onClick={handleLinkClick}>
+                  {t.nav.media}
+                </Link>
+              </li>
+              <li>
                 <Link to="contact-section" spy={true} smooth={true} duration={500} offset={-100} className="nav-link book-btn" onClick={handleLinkClick}>
                   {t.nav.book}
                 </Link>

@@ -8,7 +8,7 @@ function MediaSection() {
   // استخدام الترجمة للعناوين بدلاً من النص الثابت
   const videos = [
     { id: "NujjnCYnSY0", title: t.media.video1 },
-    { id: "e1AUG4nORW8", title: t.media.video2 },
+    { id: "RgAuAJ4kKIw", title: t.media.video2 },
     { id: "lI_hTsFN18Y", title: t.media.video3 }
   ];
 
