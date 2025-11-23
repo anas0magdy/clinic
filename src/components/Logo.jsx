@@ -10,7 +10,7 @@ const Logo = () => {
         src={`${baseUrl}images/logo.jpg`} 
         alt="Dr. Hams Samy" 
         style={{ 
-          height: '50px',       /* كبرنا الارتفاع جداً عشان التفاصيل تبان */
+          height: '40px',       /* كبرنا الارتفاع جداً عشان التفاصيل تبان */
           width: 'auto',        /* العرض يتظبط براحته */
           maxWidth: '250px',    /* حد أقصى للعرض عشان ميبوظش الموبايل */
           objectFit: 'contain', 
