@@ -1,47 +1,46 @@
 import React from 'react';
 
 const Logo = () => {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-      {/* الأيقونة */}
-      <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path 
-          d="M10 50C10 50 30 20 90 20" 
-          stroke="#002a5c" 
-          strokeWidth="6" 
-          strokeLinecap="round"
-        />
-        <path 
-          d="M10 50C10 50 40 80 90 50" 
-          stroke="#007bff" 
-          strokeWidth="6" 
-          strokeLinecap="round" 
-        />
-        <circle cx="65" cy="45" r="8" fill="#002a5c" />
-        <circle cx="68" cy="42" r="2.5" fill="white" />
-      </svg>
+  const baseUrl = import.meta.env.BASE_URL;
 
-      {/* النصوص */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: '1.2' }}>
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+      {/* الصورة بحجم كبير وواضح */}
+      <img 
+        src={`${baseUrl}images/logo.jpg`} 
+        alt="Dr. Hams Samy" 
+        style={{ 
+          height: '50px',       /* كبرنا الارتفاع جداً عشان التفاصيل تبان */
+          width: 'auto',        /* العرض يتظبط براحته */
+          maxWidth: '250px',    /* حد أقصى للعرض عشان ميبوظش الموبايل */
+          objectFit: 'contain', 
+          display: 'block'
+        }}
+        onError={(e) => { e.target.style.display = 'none'; }}
+      />
+
+      {/* فاصل رأسي صغير (اختياري) */}
+      <div style={{ width: '1px', height: '40px', background: '#eee' }}></div>
+
+      {/* النص العربي بجانب اللوجو */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: '1.4' }}>
         <span style={{ 
-          fontSize: '1.4rem', 
+          fontSize: '1.1rem', /* تصغير الخط العربي قليلاً للتناسق */
           fontWeight: '800', 
           color: '#002a5c',
-          /* التعديل هنا: تثبيت خط Cairo دائماً */
           fontFamily: "'Cairo', sans-serif",
-          letterSpacing: '-0.5px'
+          whiteSpace: 'nowrap'
         }}>
           د. هـمـس سـامـي
         </span>
         <span style={{ 
-          fontSize: '0.85rem', 
+          fontSize: '0.75rem', 
           color: '#007bff',
-          fontWeight: '600',
-          /* التعديل هنا: تثبيت خط Cairo دائماً */
-          fontFamily: "'Cairo', sans-serif", 
-          letterSpacing: '0.5px'
+          fontWeight: '700',
+          fontFamily: "'Cairo', sans-serif",
+          whiteSpace: 'nowrap'
         }}>
-           طب وجراحة العيون
+          طب وجراحة العيون
         </span>
       </div>
     </div>

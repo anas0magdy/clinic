@@ -18,7 +18,7 @@ function ServicesSection() {
       description: t.services.s2_desc
     },
     {
-      img: `${baseUrl}images/service-3.jpg`,
+      img: `${baseUrl}images/dryeye.jpg`,
       title: t.services.s3_title,
       description: t.services.s3_desc
     },
