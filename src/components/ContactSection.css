@@ -1,44 +1,51 @@
 .contact-section-wrapper {
   padding: 4rem 2rem;
-  background-color: #f9fcff; /* خلفية فاتحة */
-  text-align: center;
+  background-color: #f9fcff;
+  /* أهم تعديل: توسيط الكلام */
+  text-align: center !important; 
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #002a5c;
+  margin-bottom: 1rem;
 }
 
 .contact-subtitle {
   font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
+  color: #555;
+  max-width: 700px;
+  /* توسيط البلوك نفسه في نص الشاشة */
+  margin: 0 auto 2.5rem auto; 
+  line-height: 1.6;
 }
 
 .contact-content {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 1. إضافة تنسيقات زر الواتساب الجديد */
+/* زر الواتساب */
 .contact-whatsapp-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  background-color: #25D366; /* لون واتساب الأخضر */
+  gap: 10px;
+  background-color: #25D366;
   color: white;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
+  padding: 1rem 3rem;
+  border-radius: 50px;
   font-size: 1.2rem;
   font-weight: bold;
+  text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  text-decoration: none;
-  /* تحريكة بسيطة */
-  animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
 
 .contact-whatsapp-button:hover {
-  background-color: #1DA851; /* لون أغمق عند الـ hover */
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-  animation-play-state: paused; /* إيقاف الـ pulse عند الـ hover */
+  background-color: #1da851;
+  transform: translateY(-3px);
 }
 
 .contact-whatsapp-button svg {
@@ -46,8 +53,15 @@
   height: 24px;
 }
 
-/* (استعارة التحريكة من ملف الأيقونات العائمة) */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .contact-subtitle {
+    font-size: 1.1rem;
+  }
+  .contact-whatsapp-button {
+    width: 100%;
+    justify-content: center;
+  }
 }

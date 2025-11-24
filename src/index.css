@@ -1,4 +1,3 @@
-/* استيراد خطوط احترافية من Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -20,9 +19,21 @@ body {
   background-color: var(--bg-white);
   color: var(--text-dark);
   overflow-x: hidden;
+  line-height: 1.6; 
 }
 
-/* تطبيق الخطوط حسب اللغة (سيتم تفعيلها عبر كلاس يضيفه الـ Context) */
+/* تطبيق المحاذاة الذكية */
+p {
+  /* في الشاشات الكبيرة، خلي الكلام متساوي من الجنبين */
+  text-align: justify;       
+  text-justify: inter-word;
+  line-height: 1.8;          
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: inherit; 
+}
+
 body.font-ar {
   font-family: 'Cairo', sans-serif;
 }
@@ -43,4 +54,13 @@ a:hover {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* --- تعديل مهم للموبايل --- */
+@media (max-width: 768px) {
+  p {
+    /* في الموبايل، نلغي الـ Justify عشان المسافات متبوظش */
+    /* ونخليه يبدأ حسب اتجاه اللغة (يمين للعربي، شمال للإنجليزي) */
+    text-align: center !important; 
+  }
 }
