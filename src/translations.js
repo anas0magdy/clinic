@@ -68,7 +68,11 @@ export const content = {
       btn: "احجز موعدك الآن"
     },
     footer: {
-      address: "52 شارع أبو العتاهية، امتداد عباس العقاد، مدينة نصر، القاهرة.",
+      // تفاصيل العناوين الجديدة
+      branch1Name: "فرع مصر الجديدة",
+      branch1Address: "مستشفيات الوطني للعيون ,شارع الثورة، بجوار كوبري الجيش، النزهة.",
+      branch2Name: "فرع مدينة نصر",
+      branch2Address: "52 شارع أبو العتاهية، امتداد عباس العقاد.",
       rights: "جميع الحقوق محفوظة ©"
     }
   },
@@ -143,7 +147,11 @@ export const content = {
       btn: "Book Appointment Now"
     },
     footer: {
-      address: "52 Abu El Atahiya St, Abbas El Akkad Ext, Nasr City, Cairo.",
+      // New Address Details
+      branch1Name: "Heliopolis Branch",
+      branch1Address: "Watany Eye Hospitals, Thawra St, Beside Army Bridge, El Nozha.",
+      branch2Name: "Nasr City Branch",
+      branch2Address: "52 Abu El Atahiya St, Abbas El Akkad Ext.",
       rights: "All rights reserved ©"
     }
   }

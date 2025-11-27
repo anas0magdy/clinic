@@ -3,7 +3,6 @@
   color: #f4f4f4;
   padding-top: 3rem;
   margin-top: 2rem;
-  /* تأكد من الاتجاه حسب اللغة */
   direction: var(--dir); 
   text-align: start;
 }
@@ -14,40 +13,92 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  gap: 2rem;
-  align-items: center;
+  gap: 3rem;
+  align-items: flex-start; /* محاذاة للأعلى */
+}
+
+/* --- قسم الخريطة والتابات --- */
+.footer-map-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.branch-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.branch-tab {
+  background-color: transparent;
+  border: 1px solid #38b6ff;
+  color: #38b6ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.branch-tab.active, .branch-tab:hover {
+  background-color: #38b6ff;
+  color: #001f48;
 }
 
 .footer-map {
-  flex: 1;
-  min-width: 300px;
   height: 300px;
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 2px solid #38b6ff; /* إطار أزرق متماش مع التابات */
 }
 
 .footer-map iframe {
   filter: grayscale(80%) invert(90%);
 }
 
+/* --- قسم المعلومات --- */
 .footer-info {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-info h3 {
   font-size: 2rem;
   font-weight: 800;
-  /* تعديل اللون ليكون أوضح (سماوي) */
   color: #38b6ff; 
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.footer-info p {
+.address-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 1rem;
+}
+
+.address-item strong {
+  display: block;
+  color: #fff;
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: #e0e0e0; /* تفتيح لون النص العادي قليلاً */
+  margin-bottom: 0.5rem;
+}
+
+.address-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+}
+
+.contact-details p {
   margin-bottom: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .footer-info a {
@@ -57,12 +108,12 @@
 }
 
 .footer-info a:hover {
-  color: #38b6ff; /* نفس اللون السماوي عند الهوفر */
+  color: #38b6ff;
   text-decoration: underline;
 }
 
 .footer-bottom {
-  text-align: center !important; /* إجبار التوسيط */
+  text-align: center !important;
   padding: 1.5rem 0;
   margin-top: 3rem;
   border-top: 1px solid #003366;
@@ -71,7 +122,6 @@
   width: 100%;
 }
 
-/* لضمان أن الفقرة داخلها أيضاً متوسطة */
 .footer-bottom p {
   margin: 0;
   text-align: center !important;
@@ -80,12 +130,14 @@
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    text-align: center;
+  }
+  .branch-tabs {
+    justify-content: center;
   }
   .footer-info {
     text-align: center;
   }
-  .footer-map {
-    width: 100%;
+  .address-item {
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* فاصل خفيف */
   }
 }
